@@ -3,15 +3,7 @@
 Edit
 @endsection
 @section('content')
-@if ($errors->any())
-    <div class="alert alert-danger">
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-@endif
+
 <form class="m-5" method="POST" action="{{route('posts.update',$post->id)}}">
     @csrf
     @method('PUT')

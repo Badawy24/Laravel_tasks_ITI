@@ -18,7 +18,7 @@ index
   </thead>
   <tbody>
 
-    @foreach($posts as $post) <!-- from magic methods-->
+    @foreach($posts as $post)
 
     <tr>
         <th scope="row">{{$post->id}}</th>

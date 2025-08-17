@@ -39,6 +39,7 @@ class PostController extends Controller
         request()->validate([
             'title' => ['required', 'min:3'],
             'description' => ['required', 'min:5'],
+            'post_creator' => ['required'],
         ]);
 
 
@@ -83,7 +84,6 @@ class PostController extends Controller
             'description' => ['required', 'min:5'],
         ]);
 
-        $data = request()->all();
 
         $title = request()->title;
         $description = request()->description;
